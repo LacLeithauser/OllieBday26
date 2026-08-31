@@ -1,0 +1,22 @@
+body {
+    background-color: purple;
+}
+
+#demo {
+    height: 20vh;
+    width: 10vw;
+    scale: 1.0;
+}
+
+.anim {
+    animation: demoAnim 3s ease;
+}
+
+@keyframes demoAnim {
+   from {scale: 1.0;}
+   to {scale: 1.5;} 
+}
+
+/* #demo:hover {
+    background  : aqua;
+} */
