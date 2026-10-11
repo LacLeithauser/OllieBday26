@@ -1,5 +1,13 @@
-document.getElementById("demo").addEventListener("click", ollie);
+let x = 0;
 
-function ollie() {
-    document.getElementById("demo").classList.add("anim");
+const graves = document.querySelectorAll(".clickAnim");
+
+graves.forEach((clickAnim) => {    
+    clickAnim.addEventListener("click", resize)
+})
+
+function resize() {
+    const isGrown = this.classList.toggle("grow");
+    this.classList.toggle("shrink", !isGrown);
+    console.log(isGrown ? "beep" : "boop");
 }

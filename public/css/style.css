@@ -1,20 +1,56 @@
 body {
     background-color: purple;
+    background-size: cover;
 }
 
-#demo {
-    height: 20vh;
-    width: 10vw;
+#ollieTeaser {
+    position: relative;
+    width: 100%;
+    height: 100%;  
+}
+
+#ollieTeaser::before {
+    position: absolute;
+    inset: 0;
+    content: '';
+    background-size: cover;
+    background-image: url("../img/IMG_2489.png");
+    background-position: center;
+    opacity:0.1;
+    z-index: -1;   
+}
+
+#teaserHeader {
+    font-family: "Blackadder ITC", "ITC Blackadder", cursive, serif;
+    font-size: 5em;
+    color: black;
+    font-weight: normal;
+}
+
+.clickAnim {
+    height: clamp(16px, 18vh, 200px);
+    width: clamp(120px, 9vw, 150px);
+
     scale: 1.0;
+    animation-fill-mode: forwards;
 }
 
-.anim {
-    animation: demoAnim 3s ease;
+.grow{
+    animation: growAnim 0.5s ease-out;
 }
 
-@keyframes demoAnim {
-   from {scale: 1.0;}
-   to {scale: 1.5;} 
+.shrink {
+    animation: shrinkAnim 0.5s ease-out;
+}
+
+@keyframes growAnim{
+   0% {scale: 1.0;}
+   100% {scale: 1.5;} 
+}
+
+@keyframes shrinkAnim {
+   0% {scale: 1.5;}
+   100% {scale: 1.0;} 
 }
 
 /* #demo:hover {

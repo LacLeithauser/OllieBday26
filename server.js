@@ -14,7 +14,7 @@ app.use("/html", express.static("./app/html"));
 app.use("/font", express.static("./public/font"));
 
 app.get("/", function (req, res) {
-    let doc = fs.readFileSync("./app/html/index.html", "utf8");
+    let doc = fs.readFileSync("./app/html/teaser.html", "utf8");
     res.send(doc);
 });
 
