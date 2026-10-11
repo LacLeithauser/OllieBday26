@@ -14,7 +14,7 @@ body {
     inset: 0;
     content: '';
     background-size: cover;
-    background-image: url("../img/IMG_2489.png");
+    background-image: url("img/IMG_2489.png");
     background-position: center;
     opacity:0.1;
     z-index: -1;   
